@@ -1,0 +1,23 @@
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n'
+spring:
+  datasource:
+    password: root
+    url: jdbc:mysql://localhost:3306/jwtauth
+    username: root
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+cloudwalkers:
+  app:
+    jwtExpiration: 86400
+    jwtSecret: jwtCloudwalkerSecretKey
